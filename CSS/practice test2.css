@@ -1,0 +1,28 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#headincenter{
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: dotted rgb(99, 234, 144) underline;
+}
+
+
+#outer{
+    font-size: 25px;
+    text-align: center;
+    background-color: aqua;
+}
+
+#inner{
+    font-size: 10px;
+    text-align: center;
+    background-color: bisque;
+}
+ 
+body{
+    background-color: cornflowerblue;
+}
+
+

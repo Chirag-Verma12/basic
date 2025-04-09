@@ -1,0 +1,9 @@
+#box{
+background-image: url(images23.jpg);
+background-size: cover;
+height: 200px;
+width: 200px;
+position: fixed;
+right: 0px;
+top: 50px;
+}

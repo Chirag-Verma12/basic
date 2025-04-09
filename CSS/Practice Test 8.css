@@ -1,0 +1,19 @@
+#lorder{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 20px solid #90C67C;
+    border-top: 20px solid #328E6E;
+    animation-name: spining;
+    animation-duration: 1.5s;
+    /* animation-timing-function: ease-in-out; */
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes spining {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}    
+}

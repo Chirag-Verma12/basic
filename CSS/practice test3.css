@@ -1,0 +1,68 @@
+    #div1{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    border: 3px solid black;
+    margin: 10px;
+
+}
+
+#div2{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    border: 3px solid black;
+    margin: 10px;
+
+}
+
+#div3{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: green;
+    border: 3px solid black;
+    margin: 10px;
+
+}
+
+#h1{
+border: 3px solid black;
+width: 145px; 
+background-color: grey;
+margin: 10px;
+border-radius: 15px;
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+#navbar{
+    background-color: #0f1111;
+    height: 60px;
+
+}
+
+button{
+    background-color: #f08804;
+    color: whitesmoke;
+}
+
+input{
+    color: black;
+}
+
+a{
+    margin-right: 300px;
+}
+
+#logo{
+    color: #f08804;
+}
+

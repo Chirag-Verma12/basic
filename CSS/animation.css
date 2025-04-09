@@ -1,0 +1,33 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    /* animation-name: coloranimation; */
+    /* animation-duration: 3s; */
+    /* animation-timing-function: ease-in; */
+    /* animation-delay: 0s; */
+    /* animation-iteration-count: infinite; */
+    /* border-radius: 50%; */
+    /* animation-direction: reverse; */
+    animation: coloranimation 2s ease-in 0s infinite alternate;
+}
+
+@keyframes coloranimation {
+    0%{
+        left: 0px;
+        background-color: yellowgreen;
+    }
+
+    50%{
+        background-color: blueviolet;
+    }
+    
+    100%{
+        left: 200px;
+        background-color: aliceblue;
+    }
+}
