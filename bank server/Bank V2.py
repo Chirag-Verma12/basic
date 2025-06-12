@@ -31,9 +31,7 @@ class Bank:
     
 user = input("Enter your Name:\t")
 if(user.lower() == "chirag"):
-    print("\n**************")
-    print("   Accessed")
-    print("**************\n")
+    print("\n**************\n   Accessed\n**************\n")
 
 else:
     print("Declined")
