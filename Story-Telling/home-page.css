@@ -1,0 +1,130 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: url(pexels-scottwebb-311458.jpg);
+    background-size: cover;
+}
+
+.box{
+    background-color: #0fa4af35;
+    width: 800px;
+    height: 130px;
+    position: fixed;
+    left: 28%;
+    top: 20px;
+    border-radius: 5px;
+
+}
+
+.heading{
+    text-align: center;
+    margin-top: 15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 12px;
+    font-size: 20px;
+    color: #964734;
+    text-decoration: underline;
+}
+
+.under-main{
+    text-align: center;
+    margin-top: 20px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #003135;
+    font-weight: 600;
+}
+
+.lower-head{
+    position: fixed;
+    top: 30%;
+    left: 20px;
+    font-size: 30px;
+    font-family:cursive;
+    letter-spacing: 12px;
+    font-weight: bolder;
+    color: black;
+    text-decoration: 10px dashed black;
+}
+
+.content{
+    text-decoration: none;
+    position: fixed;
+    top: 38%;
+    left: 100px;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+ul a{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+ul a:hover{
+    text-decoration: underline;
+    animation: ancher 0ms linear 0.5ms normal forwards;
+}
+
+@keyframes ancher{
+    from{
+        font-family:'Times New Roman', Times, serif;
+        color:cadetblue;
+    }
+    to{
+        font-family:cursive;
+        color: rgba(103, 218, 222, 0.444);
+    }   
+}
+
+.box:hover{
+    animation: box-change 1s linear 1ms normal forwards;
+}
+
+@keyframes box-change{
+    from{
+        width: 800px;
+        left: 28%;
+        background-color: #0fa4af35;
+    }
+
+    to{
+        width: 1000px;
+        left: 20%;
+        background-color:rgba(153, 205, 50, 0.238);
+    }
+}
+
+.under-main:hover{
+    animation: change-color 2s linear 1ms normal forwards;
+}
+
+@keyframes change-color{
+    from{
+        color: #003135;
+        letter-spacing: none;
+    }
+    to{
+        color: rgba(255, 0, 0, 0.635);
+        letter-spacing: 5px;
+    }
+}
+
+.lower-head:hover{
+    animation: lower-head 1.5ms linear 1ms normal forwards;
+}
+
+@keyframes lower-head{
+    from{
+       color: black;  
+       text-decoration: none;
+    }
+    to{
+        color: goldenrod;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,150 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    align-self: center;
+}
+
+body{
+    background-image: url(pexels-padrinan-19670.jpg);
+    background-size: cover;
+    display: block;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+.box{
+    border: 4px dashed transparent;
+    border-radius: 3px;
+    padding: 15px 15px 15px;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    z-index: 999;
+    background-color: rgba(100, 148, 237, 0.291);
+
+}
+
+.main{
+    margin-top: 40px;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+}
+
+.title{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 9px;
+    font-size: 40px;
+    color: cadetblue;
+    text-shadow: 0px 0px 20px dodgerblue;
+}
+
+.under-head{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style:oblique;
+    text-shadow: -1px -1px 11px red;
+    letter-spacing: 10px;
+}
+
+.content{
+    font-size: 18px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: fixed;
+    right: 400px;
+    left: 400px;
+    top: 180px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bottom-photo{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.p1{
+    border: 2px dashed gainsboro;
+    width: 350px;
+    height: 250px;
+    background-size: cover;
+}
+
+.p2{
+    border: 2px dashed gainsboro;
+    width: 350px;
+    height: 250px;
+}
+.p3{
+    border: 2px dashed gainsboro;
+    width: 350px;
+    height: 250px;
+}
+
+.main:hover{
+    animation: background-color 1s linear 1ms normal forwards;
+}
+
+@keyframes background-color{
+    from{
+        background-color:rgba(100, 148, 237, 0.291);
+        width: 800px;
+        height:100px;
+        border-radius: 0px;
+    }
+
+    to{
+        background-color: rgba(59, 201, 206, 0.626);
+        width: 900px;
+        height:10%;
+        border-radius: 50px;
+    }
+}
+
+.content:hover{
+    animation: content 1s linear 1ms normal forwards;
+}
+
+@keyframes content{
+    from{
+        border: 2px solid transparent;
+        border-radius: 200px;
+    }
+
+    to{
+        border: 2px solid transparent;
+        background-color: rgba(222, 184, 135, 0.777);
+        border-radius: 20px;
+    }
+}
+
+.made-by{
+    color: rgba(0, 0, 0, 0.324);
+    text-align: center;
+    font-size: 25px;
+    font-style:oblique;
+    width: 500px;
+    margin-top: 5px;
+    text-shadow: 0px -1px 5px red;
+    letter-spacing: 5px;
+    position: fixed;
+    top: 0px;
+    left: 35%;
+}
+
+.made-by:hover{
+    color: white;
+    display: block;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 13px red;
+    
+}
