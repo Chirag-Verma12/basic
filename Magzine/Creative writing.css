@@ -1,0 +1,153 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #f2f7f2;
+}
+
+
+.heading{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    text-align:left;
+    margin-top: 20px;
+    margin-left: 20px;
+    letter-spacing: 8px;
+}
+
+#heag1{
+    color: #8e5572;
+}
+
+.center{
+    font-size: 110px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 12px;
+    text-align: center;
+    margin-top: 8%;
+    color: #443850;
+}
+
+.box1{
+    position: -ms-page;
+    background-color: #bcaa9961; 
+    margin-top: -14.6%;
+    margin-left: 70px;
+    /* on hover i have to done it blur */
+    height: 59%;
+    width: 40%;
+    padding: 30px 30px 30px 30px;
+}
+
+.content1{
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: 800;
+    text-align: center;
+}
+
+.box1:hover{
+    animation: changing 1s 1ms ease forwards;
+}
+
+@keyframes changing{
+    from{
+        box-shadow: none;
+        backdrop-filter: none;
+        border-radius: 0px;
+    }
+    to{
+        box-shadow: inset 0px 0px 20px 4px black;
+        backdrop-filter: blur(7px);
+        border-radius: 90px;
+    }
+}
+
+.box1::selection{
+    color:white;
+}
+
+.box2{
+    position: -ms-page;
+    margin-top: -40%;
+    margin-left: 55%;
+    background-color: #bcaa9961;
+    height: 59%;
+    width: 40%;   
+    padding: 30px 30px 30px 30px;
+}
+
+.content2{
+    font-size: 22.5px;
+    font-family: cursive;
+    font-weight: 800;
+    text-align: center;
+}
+
+.box2:hover{
+    animation: changing2 1s 1ms ease forwards;;
+}
+
+@keyframes changing2{
+    from{
+        box-shadow: none;
+        backdrop-filter: none;
+        border-radius: 0px;
+    }
+    to{
+        box-shadow: inset 0px 0px 20px 4px black;
+        backdrop-filter: blur(7px);
+        border-radius: 90px;
+    }
+}
+
+.box2::selection{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.box3{
+    position: fixed;
+    bottom: 30px;
+    left: 55%;
+    height: 10%;
+    width: 30%;
+    background-color: #8e557390;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: inset 0px 0 20px 3px white;
+}
+
+.next a{
+    color: #f2f7f2;
+    text-decoration: none;
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.box3:hover{
+    animation: box3-change 1s 1ms ease-in-out forwards;
+}
+
+@keyframes box3-change{
+    from{
+        box-shadow: inset 0px 0 20px 3px white;
+        border-radius: 30px;
+        color: #f2f7f2;
+        background-color: #8e557390;
+    }
+    to{
+        background-color: #d198b6a9;
+        box-shadow:inset 0px 0 20px 3px black;
+        border-radius: 20px;
+    }
+}
+

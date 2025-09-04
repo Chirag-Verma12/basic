@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.heading{
+    font-size: 120px;
+    position: fixed;
+    top: 10%;
+    left: 1%;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+    user-select: none;
+}
+
+#h2{
+    margin-top: 30px;
+    color: #dcb8cb;
+}
+
+.heading2{
+    position: fixed;
+    top: 50%;
+    left: 1%;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+    user-select: none;
+}
+
+.box{
+    position: -ms-page;
+    margin-top: 0px;
+    margin-left: 40%;
+    background-color: #ccd7e4;
+    width: 55%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 0px 20px black;
+}
+
+.content{
+    font-size: 20px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 30px 30px 30px 30px;
+}
+
+#h3{
+    font-style: italic;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+.box::selection{
+    color: #828a95;
+}
+
+.box:hover{
+    animation: changing 1s 1ms ease-in forwards;
+}
+
+@keyframes changing{
+    from{
+        background-color: #ccd7e4;
+        border-radius: 0px;
+        box-shadow: inset 0px 0px 20px black;
+    }
+    to{
+        background-color: #dcb8cba3;
+        border-radius: 50px;
+        box-shadow: inset 12px 0px 20px black;
+    }
+}
+
+.box2{
+    position: fixed;
+    bottom: 6%;
+    left: 3%;
+    background-color: #cbd081;
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+    width: 30%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #ceeaf7;
+    box-shadow: inset 0px 0px 20px 7px #ccd7e4;
+}
+
+.box2:hover{
+    animation: boxing 1s 1ms ease-in forwards;
+}
+
+@keyframes boxing{
+    from{
+        background-color: #cbd081;
+        color: #ceeaf7;
+        box-shadow: inset 0px 0px 20px 7px #ccd7e4;
+    }
+    to{
+        background-color: #828a95;
+        color: #cbd081;
+        box-shadow: inset 10px -10px 20px 0px #dcb8cb;
+    }
+}

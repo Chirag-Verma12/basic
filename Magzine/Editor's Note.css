@@ -1,0 +1,53 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: url(editor\ note.jpg);
+    background-size: cover;
+
+}
+
+.box{
+    background-color: rgba(240, 248, 255, 0.411);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    position:-ms-page;
+    margin-top: 13%;
+    margin-left: 25%;
+    height: 50%;
+    width: 50%;
+    padding: 20px 20px 20px 20px;
+    box-shadow:18px -20px 20px 0px black;
+}
+
+.note{
+    font-size: 20px;
+    font-weight: 800;
+    font-family:serif;
+    letter-spacing: 1px;
+}
+
+.box:hover{
+    animation: box 1s ease-in-out normal forwards;
+}
+
+@keyframes box{
+    from{
+        background-color: rgba(240, 248, 255, 0.411);
+        backdrop-filter: blur(10px);
+        border-radius: 4px;
+        box-shadow:18px -20px 20px 0px black;
+        color: black;
+        font-weight: 800;
+    }
+    to{
+        background-color:rgba(250, 235, 215, 0.493);
+        background-clip: blur(2px);
+        border-radius: 0px;
+        box-shadow: 0px 0px 20px 8px black;
+        color: aliceblue;
+        font-weight: 900;
+    }
+}

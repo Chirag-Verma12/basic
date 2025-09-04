@@ -1,0 +1,129 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #edf2fb;
+}
+
+.heading{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 50px;
+    font-weight: 900;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 4px;
+}
+
+.heading p{
+    display: inline;
+}
+
+#h1{
+    color: #abc4ff;
+}
+
+.heading2{
+    margin-top: 32%;
+    font-size: 200px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    letter-spacing: 10px;
+    margin-left: 20px;
+}
+
+.heading2 p{
+    display: inline;
+}
+
+#h3{
+    margin-top: 3%;
+}
+
+.box{
+    padding: 15px 15px 15px 15px;
+    position: fixed;
+    background-color: #d1ddf7;
+    width: 60%;
+    height: 25%;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 40px;
+    color:azure;
+    text-align: center;
+    box-shadow: inset 0px 0px 20px white;
+}
+
+.box:hover{
+    user-select: none;
+    animation: change 1s 1ms ease-in forwards;
+}
+
+@keyframes change{
+    from{
+        border-radius: 40px;
+        color: azure;
+        box-shadow: inset 0px 0px 20px white;
+        text-shadow: none;
+    }
+    to{
+        background-color: #d7e3fc;
+        border-radius: 4px;
+        color: #abc4ff;
+        box-shadow: inset 0px 0px 20px #000614;
+        text-shadow: 0px 0px 17px #3370ff;
+    }
+}
+
+.box2{
+    background-color:rgba(95, 158, 160, 0.718);
+    padding: 20px 20px 20px 20px;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 20px black;
+    color: black;
+}
+
+.box2:hover{
+    animation: animate 1s 1ms ease-in forwards;
+}
+
+@keyframes animate{
+    from{
+        background-color:rgba(95, 158, 160, 0.718);
+        color: black;
+        box-shadow: inset 0px 0px 20px black;
+        border-radius: 3px;
+    }
+    to{
+        background-color:rgba(138, 226, 230, 0.718);
+        color: white;
+        box-shadow: inset 10px -10px 20px black;
+        border-radius: 30px;
+    }
+}
+
+.content{
+    position:fixed;
+    font-size: 22px;
+    left: 2%;
+    bottom: 30%;
+    right: 15%;
+    top: 10%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+
+.next{
+    position: fixed;
+    bottom: 6%;
+    left: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.next a{
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 5px;
+    font-size: 50px;
+}

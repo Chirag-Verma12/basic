@@ -1,0 +1,155 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #f6fff8;
+}
+
+.heading{
+    font-weight: 900;
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    user-select: none;
+}
+
+.heading p{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#h2{
+    color: #A2D2FF;
+}
+
+#h1, #h2{
+    display: inline;
+}
+
+.heading2 p{
+    display: inline;
+    font-size: 75px;
+    font-weight: 900;
+    margin-left: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.heading2{
+    margin-top: 80px;
+    text-align: left;
+    letter-spacing: 7px;
+    user-select: none;
+}
+
+#h6, #h8{
+    color: #62b6cb;
+    text-decoration: underline;
+}
+
+#h6, #h7, #h8{
+    display: block;
+}
+
+#h5, #h6, #h7, #h8{
+    margin-top: 30px;
+}
+
+.photo{
+    height: 95%;
+    width: 50%;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-image: url(pexels-optical-chemist-340351297-31241812.jpg);
+    background-size:cover;
+    border-radius: 3px;
+}
+
+.c-box{
+    margin-top: 0.6%;
+    margin-left: 0.6%;
+    height: 86%;
+    width: 45%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 2px #62b6cb;
+    padding: 30px 30px 30px 30px;
+}
+
+.c-box:hover{
+    animation: change 1s 1ms ease-in forwards;
+}
+
+@keyframes change{
+    from{
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px 2px #62b6cb;
+    }
+    to{
+        backdrop-filter: blur(3px);
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 2px black;
+    }
+}
+
+.box{
+    font-size: 18px;
+    font-weight: 800;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #6b9080;
+}
+
+.box::selection{
+    color: #e0aaff;
+}
+
+#c1{
+    color: #065a60;
+    font-family: cursive;
+    text-decoration: underline;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 22%;
+    width: 18%;
+    height: 5%;
+    background-color: #c8e7ff;
+    color: black;
+    text-decoration: none;
+    padding: 20px 20px 20px 20px;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    box-shadow: inset 0px 0px 20px black;
+}
+
+.box2:hover{
+    animation: boxing 1s 1ms ease-in forwards;
+}
+
+@keyframes boxing{
+    from{
+        box-shadow: inset 0px 0px 20px black;
+        background-color: #c8e7ff;
+        color: black;
+        border-radius: 0px;
+    }
+    to{
+        box-shadow: inset 0px -13px 20px #1b4965;
+        background-color: #bee9e8;
+        color: #5fa8d3;
+        border-radius: 30px;
+    }
+}

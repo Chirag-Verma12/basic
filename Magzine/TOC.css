@@ -1,0 +1,75 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    padding: 20px 20px 20px 20px;
+    background-image: url(editior.jpg), url(Editors2.jpg);
+    background-size: cover;
+    background-blend-mode:multiply;
+}
+
+.box{
+    position: fixed;
+    left: 38%;
+    background-color: rgba(240, 248, 255, 0.278);
+    backdrop-filter: blur(3px);
+    height: 70px;
+    width: 500px;
+    color: rgba(245, 245, 245, 0.549);
+    /* color: rgba(100, 148, 237, 0.668); */
+    font-weight: 900;
+    box-shadow: inset -20px 0px 20px 1px black;
+    border-radius: 2px;
+}
+
+.Table{
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 20px black;
+}
+
+.content a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 4px;
+}
+
+.content li{
+    margin-top: 40px;
+    list-style-type: none;
+    background-color: rgba(240, 248, 255, 0);
+    text-align: center;
+}
+
+.cont-box{
+    position: fixed;
+    bottom: 0%;
+    left: 40%;
+    margin-bottom: 30px;
+}
+
+.shadow:hover{
+    animation: show 1s linear 1ms normal forwards;
+    width: 100%;
+}
+
+@keyframes show{
+    from{
+        box-shadow: none;
+        background-color: rgba(240, 248, 255, 0);
+    }
+    to{
+        box-shadow: 0px 0px 12px 0px white;
+        background-color:rgba(240, 248, 255, 0.388);
+        backdrop-filter: blur(10px);
+
+    }
+}
