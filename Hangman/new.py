@@ -1,3 +1,4 @@
+#change the answer idx to the letter idx
 from curses.ascii import isalpha
 import random
 
@@ -28,46 +29,29 @@ Word_letter = int(input("\nWeather You want to guess a Letter or a Word (1/ 2)??
 
 #Script of Letter 1:
 if Word_letter == 1:
-    while lives >= 0:
+    while lives > 0:
         print("\nCurrent Word:\t", " ".join(display_word))
-        while lives >= 0:
+        while true:
             letter = input("\nGuess a letter:\t").strip().lower()
             if letter.isalpha() and len(letter) == 1:
+                print("Thanks...")
                 if letter in guessed_words or letter in wrong_guess:
                     print("Guess one at a time")
             else:
                 print("\nPlease guess 1 letter at a time...") 
         
             if letter in answer and len(letter) == 1:
-                print("\nDamn...")
+                print("\nYou Got It!!!")
                 guessed_words.append(letter)
 
                 for idx in range(len(answer)):
                     if answer[idx] == letter:
+                        print("\n",display_word)
                         display_word[idx] = letter 
                         print("\n",display_word)
-
             else:
                 print("\nYou guessed it Wrong....")
                 lives -= 1
                 print(f"Lives Left:\t {lives}" )
                 wrong_guess.append(letter)
-
-#script of Word 2:
-if Word_letter == 2:
-    print(f"\n********** Welcome, {Name} To The Sudden Death Roound **********")
-    print("\nIn this you have to write the word in one round else you will lost...")
-    print("\nCurrent Word is:", " ".join(display_word))
-    print("Length Of The Word:", len(answer))
-    
-    word = str(input("\nGuess the Word:\t")).strip().lower()
-    if word.isalpha() and word == answer:
-        print("\n************** YOU WON **************\n")
-    else:
-        print("\nYou have gussed it wrong....")
-        print("\n------------ Game Over ------------")
-
-    # again = input("Do you want to play game again??? (yes/ no):\t")
-    # if (again.lower() != "yes"):
-    #     print("Thanks for playing")
-    #     break
+            
