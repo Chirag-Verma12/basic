@@ -1,5 +1,6 @@
 #include <stdio.h>
-//main code that will be uploaded to github
+#include <ctype.h>
+
 int main(){
     float a, b;
     int choice;
@@ -20,35 +21,49 @@ int main(){
     printf("\nIf you enter an alpabet the code will crash");
     printf("\n");
 
+    //right now we are testing things on 'a' but we have to do it on the scanf 
+    //so, try all the method if(scanf("%f", &a) != isalpha(a)) all that or != 'y' etc etc
     do{
-        do{
+        do {
             printf("\nNumber 1: ");
-            scanf("%f", &a);
-            if(a >= 1){
-                break;
-            } else{
-                printf("\nInvalid Input");
-                printf("\nWanna try again? (y /n) ->\t");
-                scanf(" %c", &invalid);
-            }
-        }while(invalid == 'y' || invalid == 'Y');
-        if(invalid =='n' || invalid == 'N'){
-            break;
+
+            if (scanf("%f", &a) != 1) {   // 👈 detects character input
+                printf("\nInvalid Input!");
+
+            // clear input buffer
+            while (getchar() != '\n');
+            printf("\nWanna try again? (y/n): ");
+            scanf(" %c", &invalid);
+        } else if (a < 1) {             // number but invalid range
+            printf("\nInvalid Input! Number must be >= 1");
+            printf("\nWanna try again? (y/n): ");
+            scanf(" %c", &invalid);
+        } else {
+        break; // valid number
         }
-        
-        
-        do{
-            printf("Number 2 = ");
-            scanf("%f", &b);
-            if(b >= 1){
-                break;
-            } else{
-                printf("\nInvalid Input");
-                printf("\nWanna try again? (y /n) ->\t");
-                scanf(" %c", &invalid_n2);
-            }
-        }while(invalid_n2 == 'y' || invalid_n2 == 'Y');
-        if(invalid_n2 == 'n' || invalid_n2 == 'N'){
+    } while (invalid == 'y' || invalid == 'Y');
+    if (invalid == 'n' || invalid == 'N') {
+        break;
+    }       
+
+    do{
+        printf("\nNumber 2:");
+
+        if(scanf("%f", &b) != 1){
+            printf("\nInvalid Number");
+
+            while(getchar() != '\n');
+            printf("\nWanna try again? (y/ n): ");
+            scanf(" %c", &invalid_n2);
+        } else if(b < 1){
+            printf("\nInvalid Input ! Number must be >= 1");
+            printf("Wanna try again? (y/ n): ");
+            scanf(" %c", &invalid_n2);
+        } else{
+            break;
+        } 
+    }while(invalid_n2 == 'y' || invalid_n2 == 'Y');
+    if(invalid_n2 == 'n' || invalid_n2 == 'N'){
             break;
         }
     
