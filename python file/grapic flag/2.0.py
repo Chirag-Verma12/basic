@@ -1,0 +1,270 @@
+import turtle
+
+from sympy import FallingFactorial
+
+flag = turtle.Turtle()
+flag.getscreen().bgcolor("Skyblue")
+
+flag.penup()
+flag.goto(0,-270)
+flag.pendown()
+
+#stage 1
+flag.color("saddle brown")
+flag.fillcolor("saddle brown")
+flag.begin_fill()
+flag.backward(300)
+flag.forward(600)
+flag.left(90)
+flag.forward(70)
+flag.left(90)
+flag.forward(600)
+flag.left(90)
+flag.forward(70)
+flag.end_fill()
+
+flag.penup()
+flag.goto(0,-200)
+flag.pendown()
+
+#stage 2
+flag.color("sandy brown")
+flag.fillcolor("sandy brown")
+flag.begin_fill()
+flag.left(90)
+flag.forward(200)
+flag.left(90)
+flag.forward(70)
+flag.left(90)
+flag.forward(400)
+flag.left(90)
+flag.forward(70)
+flag.left(90)
+flag.forward(200)
+flag.end_fill()
+
+flag.penup()
+flag.goto(0,-130)
+flag.pendown()
+
+#stage 3
+flag.color("indian red")
+flag.fillcolor("indian red")
+flag.begin_fill()
+flag.forward(100)
+flag.left(90)
+flag.forward(70)
+flag.left(90)
+flag.forward(200)
+flag.left(90)
+flag.forward(70)
+flag.left(90)
+flag.forward(100)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-30,-60)
+flag.pendown()
+
+#flag stick
+flag.color("black")
+flag.fillcolor("brown4")
+flag.begin_fill()
+flag.left(90)
+flag.forward(400)
+flag.left(-90)
+flag.forward(20)
+flag.left(270)
+flag.forward(400)
+flag.left(-90)
+flag.forward(30)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-10,320)
+flag.pendown()
+
+#flag p1 orange
+flag.color("black")
+flag.fillcolor("#FF671F")
+flag.begin_fill()
+flag.left(180)
+flag.forward(240)
+flag.left(-90)
+flag.forward(50)
+flag.left(-90)
+flag.forward(240)
+flag.left(-90)
+flag.forward(50)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-10,270)
+flag.pendown()
+
+#flag p2 white
+flag.color("black")
+flag.fillcolor("#FFFFFF")
+flag.begin_fill()
+flag.left(-90)
+flag.forward(240)
+flag.left(-90)
+flag.forward(50)
+flag.left(-90)
+flag.forward(240)
+flag.left(-90)
+flag.forward(50)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-10,220)
+flag.pendown()
+
+#flag p3 green
+flag.color("black")
+flag.fillcolor("#046A38")
+flag.begin_fill()
+flag.left(-90)
+flag.forward(240)
+flag.left(-90)
+flag.forward(50)
+flag.left(-90)
+flag.forward(240)
+flag.left(-90)
+flag.forward(50)
+flag.end_fill()
+
+flag.penup()
+flag.goto(125,245)
+flag.pendown()
+
+#ashok chaker
+flag.color("black")
+flag.fillcolor("#06038D")
+flag.begin_fill()
+flag.circle(17)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-250,290)
+flag.pendown()
+
+# #sun
+flag.speed(20)
+flag.color("#FFE484")
+flag.fillcolor("#FFCC33")
+
+for i in range(30):
+    flag.begin_fill()
+    flag.left(90)
+    flag.forward(100)
+    flag.left(120)
+    flag.forward(100)
+    flag.left(120)
+    flag.forward(100)
+    flag.end_fill()
+
+
+flag.penup()
+flag.goto(-300,-270)
+flag.pendown()
+
+#ground
+flag.speed(5)
+flag.color("#367c2b")
+flag.fillcolor("#367c2b")
+flag.begin_fill()
+flag.left(-90)
+flag.forward(300)
+flag.backward(1100)
+flag.left(90)
+flag.forward(200)
+flag.left(-90)
+flag.forward(1100)
+flag.left(-90)
+flag.forward(200)
+flag.end_fill()
+
+flag.penup()
+flag.goto(320,-359)
+flag.pendown()
+
+#hang
+flag.color("#1DB954")
+flag.fillcolor("#1DB954")
+flag.begin_fill()
+flag.left(90)
+flag.forward(640)
+flag.left(-90)
+flag.forward(65)
+flag.left(-90)
+flag.forward(640)
+flag.left(-90)
+flag.forward(65)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-300,-350)
+flag.pendown()
+
+#write
+flag.color("#7FFF00")
+flag.write("HAPPY INDEPENDENCE DAY!!!", font=("arial", 40, "bold"))
+
+#pole -1
+flag.color("black")
+flag.penup()
+flag.goto(-350,-270)
+flag.pendown()
+
+flag.color("#D3D3D3")
+flag.fillcolor("#D3D3D3")
+flag.begin_fill()
+flag.backward(320)
+flag.left(-90)
+flag.forward(20)
+flag.left(90)
+flag.forward(320)
+flag.left(90)
+flag.forward(20)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-350,50)
+flag.pendown()
+
+flag.color("#FFFF8F")
+flag.pensize(width=1)
+flag.fillcolor("#FFFF8F")
+flag.begin_fill()
+flag.forward(30)
+flag.left(90)
+flag.forward(30)
+flag.left(90)
+flag.forward(80)
+flag.left(90)
+flag.forward(30)
+flag.left(90)
+flag.forward(30)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-330,60)
+flag.pendown()
+
+flag.color("#FFEA00")
+flag.fillcolor("#FFEA00")
+flag.begin_fill()
+flag.left(90)
+flag.forward(10)
+flag.left(90)
+flag.forward(60)
+flag.left(90)
+flag.forward(10)
+flag.left(90)
+flag.forward(60)
+flag.end_fill()
+
+
+
+turtle.done()
