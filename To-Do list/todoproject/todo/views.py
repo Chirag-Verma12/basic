@@ -6,11 +6,11 @@ from .forms import TaskForm
 def index(request):
     tasks = Task.objects.all()
     form = TaskForm()
-    if request.method == 'POST':
+    if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/')
+        return redirect('home')
     return render(request, 'todo/index.html', {'task': tasks, 'form': form})
 
 #delete task

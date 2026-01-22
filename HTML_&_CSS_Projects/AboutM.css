@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(pexels-zhanqun-cai-1507025-3998488.jpg);
+    background-size: cover;
+}
+
+.heading{
+    font-size: 13rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+#content{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+#Edu{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 2%;
+    color:lightskyblue;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+#Int{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin-top: 2%;
+    margin-left: 2%;
+    color:gold;
+    letter-spacing: 2px;
+    line-height: 35px;
+    text-decoration: underline;
+}
+
+#Int2{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin-top: 0.5%;
+    margin-left: 2%;
+    color:goldenrod;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+#ullist{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ullist a{
+    background-color: rgba(169, 205, 237, 0.223);
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border: 1px solid white;
+    padding: 15px 40px 15px 40px;
+    text-align: center;
+}

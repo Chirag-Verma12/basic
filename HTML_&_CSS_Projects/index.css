@@ -6,23 +6,26 @@
 body{
     background-image: url(moon.jpg);
     background-size: auto;
+}
+
+header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 95vh;
+    min-height: 90vh;
 }
 
 .box{
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.824) 10%, transparent 50%);
-    backdrop-filter: blur(10px);
+    background: radial-gradient(circle, rgba(0, 76, 255, 0.207) 10%, transparent 50%);
+    backdrop-filter: blur(2px);
     width: 45%;
     max-width: 46%;
     min-width: 40%;
     border-radius: 8px;
     height: max-content;
     padding: 2px 2px 2px 2px;
-    margin-left: 27%;
+
 }
 
 .content{
@@ -36,9 +39,6 @@ body{
 
 .name{
     background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-content: center;
 }
 
 .heading{
@@ -51,8 +51,44 @@ body{
 }
 
 .upperLine{
-    width: 80%;
-    margin-left: 10%;
+    width: 55%;
+    margin-left: 0%;
     margin-top: 3%;
+    height: 5%;
     margin-bottom: 2%;
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.738);
+}
+
+.lowerLine{
+    width: 55%;
+    margin-left: 0%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.738);
+}
+
+.navbar{
+    margin-top: -4%;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border: 1px solid white;
+    padding: 15px 40px 15px 40px;
+    text-align: center;
 }

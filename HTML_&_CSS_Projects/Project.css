@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(pexels-elina-araja-1743227-3311533.jpg);
+    background-size: cover;
+}
+
+.heading{
+    font-size: 12rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.line{
+    width: 90%;
+    border: none;
+    border-top: 2px solid white;
+}
+
+#Projects{
+    font-size: 40px;
+    margin-left: 4%;
+    font-family: Trebuchet MS;
+    font-weight: 600;
+    color: thistle;
+    letter-spacing: 3px;
+}
+
+#listP{
+    list-style: disc;
+    margin-top: 2%;
+    line-height: 7rem;
+}
+
+#listP a{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+#ullist{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ullist a{
+    background-color: rgba(169, 205, 237, 0.223);
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border: 1px solid white;
+    padding: 15px 40px 15px 40px;
+    text-align: center;
+}
