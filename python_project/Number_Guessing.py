@@ -12,7 +12,9 @@ again = " "
 random_number = int(random.randint(1, 100))
 print(f"\nYour TOTAL LIFE: {lives}")
 
+#Main Logic
 while True:
+    #Tells invalid input by the user, valid input must be > 1
     while True or again == "yes":
         try:
             guess = int(input("Guess:"))
@@ -47,12 +49,14 @@ while True:
             print("\nYou LOSS >_<")
             print(f"The Actual Number Was {random_number}")
     
+    #Restart, and reset Lives, attempts and generate a new number
     while lives < 1 or guess == random_number:
         random_number = int(random.randint(1, 100))
         lives = 7
         attempt = 0
         again = input("\nDo You wanna play again?? (y/ n):")
 
+    #Quiting function
     if(again == "N" or again == "n" or again == "no" or again == "NO"):
         print("<><><><><><><><><><><><><><><><><><>")
         print("\n        Thank for playing\n")
