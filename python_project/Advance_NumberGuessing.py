@@ -11,7 +11,7 @@ print(Fore.GREEN + "*************************************")
 easy_Lives = 7
 medium_Lives = 5
 hard_Lives = 4
-score = 0 
+score = 0
 attempt = 0
 again = " "  
 win = 0
@@ -51,6 +51,7 @@ while True:
             win +=1 #counts the win 
             print(Fore.GREEN + f"🎉 YOU WON in {easy_Lives} Remaining,")
             print(f"Attempts you have taken {attempt}")
+            print(f"UR SCORE: {score}")
             if(win > 1): #win more than one, it count it as a streak and print the streak
                 print(f"\nYour Streak is going crazy!!! {win}, Keep Going Champ\n")
 
@@ -59,10 +60,10 @@ while True:
             easy_Lives -=1
             if(random_number < 30 and guess >50): #make all this in a single row like random number or and this and that
                 print("Huge Difference")
-                score +=4
+                score +=4 #record the scores
             else:
                 print(Fore.MAGENTA + "HIGHER Than the Actual Number")
-                score +=6
+                score +=6 #if, user is closer... it will add +6
             print(f"\nLIFE LEFT: {easy_Lives}")
 
         elif(guess < random_number):
@@ -70,8 +71,10 @@ while True:
             attempt +=1
             if(random_number > 50 and guess < 30):
                 print("Huge diiiiiiffff")
+                score +=4
             else:
                 print(Fore.BLUE + "LOWER Than The Actual Number")
+                score +=6
             print(f"\nLIFE LEFT: {easy_Lives}")
 
         if(easy_Lives == 0):
