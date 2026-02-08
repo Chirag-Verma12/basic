@@ -1,6 +1,5 @@
 import random
 from colorama import Fore, init, Style
-from sympy import Le
 init(autoreset=True)
 print(Fore.GREEN + "*************************************")
 print("-------------------------------------")
@@ -35,7 +34,9 @@ while True:
             print(Fore.RED + "\nInvalid input, please keep a number")
 
     if(Level == 4):
-        print("thank you for playing")
+        print("*******************************")
+        print("     Thank You For Playing")
+        print("*******************************")
         break
 
     while(Level == 1):
@@ -51,6 +52,8 @@ while True:
                     print(Fore.RED + "\nInvalid Input")
             except ValueError:
                 print(Fore.RED + "Invalid input, please keep a number")
+        
+        #Wining Logic
         if(guess == random_number):
             print(Fore.CYAN + "\nYOU WON")
             win +=1 #counts the win 
@@ -63,10 +66,11 @@ while True:
                 print(f"\nYour Streak is going crazy!!! {win}, Keep Going Champ\n")
             break
 
+        #Tells user if the number is high or low
         elif(guess > random_number):
             attempt +=1
             easy_Lives -=1
-            if(random_number < 30 and guess >50): #make all this in a single row like random number or and this and that
+            if(random_number < 30 and guess >50): 
                 print("Huge Difference")
                 score +=4 #record the scores
             else:
@@ -83,25 +87,75 @@ while True:
                 print(Fore.BLUE + "LOWER Than The Actual Number")
                 score +=6
 
+        #Lossing
         if(easy_Lives == 0):
             print("\nYou LOSS >_<")
+            print(f"SCORE: {score}\n")
             print(f"The Actual Number Was {random_number}")
-            print(f"Your score {score}")
             if(win > 1):
-                print(f"Your wining streak {win}, DO IT AGAIN...")
+                print(f"Your wining streak {win}, DO IT AGAIN...\n")
         
 
     #Medium Level
     random_number = int(random.randint(1, 100)) 
     while(Level == 2):
-        continue
+        #Tells user if the number is high or low
+        print(Fore.RED + f"LIVES: {medium_Lives}")
+        # print(random_number) Answer revealing
+        while True:
+            try:
+                guess = int(input(Fore.YELLOW + "Guess:" + Fore.RESET))
+                if(guess > 1):
+                    break
+                else:
+                    print("Invalid Input")
+            except ValueError:
+                print(Fore.RED + "Invalid input, please keep number")
+        
+        #Wining Logic
+        if(guess == random_number):
+            print(Fore.CYAN + "\nYOU WON")
+            attempt +=1
+            win +=1
+            score += 17
+            print(Fore.GREEN + f"🎉 YOU WON in {medium_Lives} Remaining,")
+            print(f"SCORE: {score}\n")
+            print(f"Attempts you have taken {attempt}")
+            if(win >1):
+                print(f"Your Streak is Going Crazy!!! {win}, keep going champ\n")
+                score += 10
+            break
+        
+        #Tells the user is the Number high or low
+        elif(guess > random_number):
+            medium_Lives -=1
+            attempt +=1
+            score +=6
+            print("HIGHER Than Actual Number\n")
+        
+        elif(guess < random_number):
+            medium_Lives -=1
+            attempt +=1
+            score +=6
+            print("LOWER Than Actual Number")
+        
+        #Lossing
+        if(medium_Lives == 0):
+            print("\nYou LOSS > _ <")
+            print(f"SCORE: {score}")
+            print(f"Actual Number was {random_number}\n")
+            if(win > 1):
+                print(f"Your wining streak is {win}, DO IT AGAIN...\n")
+            break
 
 
     #Hard Level
     random_number = int(random.randint(1, 110)) 
     while Level == 3:
         print(Fore.RED + f"\nLIVES: {hard_Lives}")
-        print(random_number) 
+        # print(random_number) Answer revealing
+
+        #Tells user if the number is high or low
         while True:
             try:
                 guess = int(input(Fore.YELLOW + "Guess:" + Fore.RESET))
@@ -118,28 +172,32 @@ while True:
             score +=20
             win +=1 #counts the win 
             print(Fore.GREEN + f"🎉 YOU WON in {hard_Lives} Remaining,")
+            print(f"SCORE: {score}")
             print(f"Attempts you have taken {attempt}")
-            print(f"Score: {score}")
             if(win > 1): #win more than one, it count it as a streak and print the streak
                 print(f"\nYour Streak is going crazy!!! {win}, Keep Going Champ\n")
                 score += 15
+            break
 
         elif(random_number >= 1 and random_number <= 30):
             hard_Lives -=1
             attempt +=1
             score +=7
             print("THE number lies btw 1 to 30")
+
         elif(random_number > 30 and random_number <= 80):
             hard_Lives -=1
             attempt +=1
             score +=7
             print("IT lies btw 40 to 80")
+
         elif(random_number > 80 and random_number <= 110):
             hard_Lives -=1
             attempt +=1
             score +=7
             print("Lies btw 80 to 110")
         
+        #give's a HINT in HARD LEVEL, when one lives is left
         if(hard_Lives == 1):
             hint = input("\nDo you want a hint?? (y/ n)").lower()
             if(hint == "y" or hint == "yes"):
@@ -155,3 +213,4 @@ while True:
             print(f"Actual Number was {random_number}")
             if(win > 1):
                 print(f"Your wining streak is {win}, DO IT AGAIN...")
+            break
