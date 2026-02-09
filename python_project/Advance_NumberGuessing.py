@@ -98,6 +98,7 @@ while True:
 
     #Medium Level
     random_number = int(random.randint(1, 100)) 
+    score = 0
     while(Level == 2):
         #Tells user if the number is high or low
         print(Fore.RED + f"LIVES: {medium_Lives}")
@@ -131,13 +132,13 @@ while True:
             medium_Lives -=1
             attempt +=1
             score +=6
-            print("HIGHER Than Actual Number\n")
+            print(Fore.MAGENTA + "HIGHER Than Actual Number\n")
         
         elif(guess < random_number):
             medium_Lives -=1
             attempt +=1
             score +=6
-            print("LOWER Than Actual Number")
+            print(Fore.BLUE + "LOWER Than Actual Number\n")
         
         #Lossing
         if(medium_Lives == 0):
@@ -150,6 +151,7 @@ while True:
 
 
     #Hard Level
+    score = 0
     random_number = int(random.randint(1, 110)) 
     while Level == 3:
         print(Fore.RED + f"\nLIVES: {hard_Lives}")
@@ -183,19 +185,19 @@ while True:
             hard_Lives -=1
             attempt +=1
             score +=7
-            print("THE number lies btw 1 to 30")
+            print(Fore.LIGHTBLUE_EX + "THE number lies btw 1 to 30")
 
         elif(random_number > 30 and random_number <= 80):
             hard_Lives -=1
             attempt +=1
             score +=7
-            print("IT lies btw 40 to 80")
+            print(Fore.LIGHTBLUE_EX + "IT lies btw 40 to 80")
 
         elif(random_number > 80 and random_number <= 110):
             hard_Lives -=1
             attempt +=1
             score +=7
-            print("Lies btw 80 to 110")
+            print(Fore.LIGHTBLUE_EX + "Lies btw 80 to 110")
         
         #give's a HINT in HARD LEVEL, when one lives is left
         if(hard_Lives == 1):
@@ -210,7 +212,7 @@ while True:
         if(hard_Lives == 0):
             print("\nYou LOSS > _ <")
             print(f"Score : {score}")
-            print(f"Actual Number was {random_number}")
+            print(f"Actual Number was {random_number}\n")
             if(win > 1):
-                print(f"Your wining streak is {win}, DO IT AGAIN...")
+                print(f"Your wining streak is {win}, DO IT AGAIN...\n")
             break
