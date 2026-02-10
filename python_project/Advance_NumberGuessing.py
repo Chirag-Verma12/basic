@@ -25,27 +25,27 @@ while True:
     print("Input The Diffculty You Want..\n1. Easy\n2. Medium\n3. Hard\n4. Exit\n")
     while True:
         try:
-            Level = int(input("Enter The Number Of Diffculty ->"))
+            Level = int(input("Enter The Number Of Diffculty -> "))
             if(Level >= 5):
                 print(Fore.RED + "\nInvalid Input!!!")
             else:
                 break
         except ValueError:
             print(Fore.RED + "\nInvalid input, please keep a number")
-
+    print("\b")
     if(Level == 4):
-        print("*******************************")
-        print("     Thank You For Playing")
-        print("*******************************")
+        print(Fore.LIGHTBLUE_EX + "*******************************" + Fore.RESET)
+        print(Fore.LIGHTGREEN_EX + "     Thank You For Playing" + Fore.RESET)
+        print(Fore.LIGHTBLUE_EX + "*******************************" + Fore.RESET)
         break
 
     while(Level == 1):
         # print(random_number) Answer revealing
         #Tells invalid input by the user, valid input must be > 1
-        print(Fore.RED + f"\nLives: {easy_Lives}" + Fore.RESET)
+        print(Fore.RED + f"Lives: {easy_Lives}" + Fore.RESET)
         while True:
             try:
-                guess = int(input(Fore.YELLOW + "\nGuess:" + Fore.RESET))
+                guess = int(input(Fore.YELLOW + "Guess:" + Fore.RESET))
                 if(guess > 1):
                     break
                 else:
@@ -71,31 +71,31 @@ while True:
             attempt +=1
             easy_Lives -=1
             if(random_number < 30 and guess >50): 
-                print("Huge Difference")
+                print("Huge Difference\n")
                 score +=4 #record the scores
             else:
-                print(Fore.MAGENTA + "HIGHER Than the Actual Number")
+                print(Fore.MAGENTA + "HIGHER Than the Actual Number\n")
                 score +=6 #if, user is closer... it will add +6
 
         elif(guess < random_number):
             easy_Lives -=1
             attempt +=1
             if(random_number > 20 and guess > 60):
-                print("Huge diiiiiiffff")
+                print("Huge diiiiiiffff\n")
                 score +=4
             else:
-                print(Fore.BLUE + "LOWER Than The Actual Number")
+                print(Fore.BLUE + "LOWER Than The Actual Number\n")
                 score +=6
 
         #Lossing
         if(easy_Lives == 0):
-            print("\nYou LOSS >_<")
-            print(f"SCORE: {score}\n")
-            print(f"The Actual Number Was {random_number}")
+            print(Fore.LIGHTRED_EX + "\nYou LOSS >_<")
+            print(Fore.LIGHTYELLOW_EX + f"SCORE: {score}")
+            print(f"The Actual Number Was {random_number}\n")
             if(win > 1):
                 print(f"Your wining streak {win}, DO IT AGAIN...\n")
+            break
         
-
     #Medium Level
     random_number = int(random.randint(1, 100)) 
     score = 0
@@ -142,8 +142,8 @@ while True:
         
         #Lossing
         if(medium_Lives == 0):
-            print("\nYou LOSS > _ <")
-            print(f"SCORE: {score}")
+            print(Fore.LIGHTRED_EX + "\nYou LOSS > _ <")
+            print(Fore.LIGHTYELLOW_EX + f"SCORE: {score}")
             print(f"Actual Number was {random_number}\n")
             if(win > 1):
                 print(f"Your wining streak is {win}, DO IT AGAIN...\n")
@@ -154,7 +154,7 @@ while True:
     score = 0
     random_number = int(random.randint(1, 110)) 
     while Level == 3:
-        print(Fore.RED + f"\nLIVES: {hard_Lives}")
+        print(Fore.RED + f"LIVES: {hard_Lives}")
         # print(random_number) Answer revealing
 
         #Tells user if the number is high or low
@@ -185,23 +185,23 @@ while True:
             hard_Lives -=1
             attempt +=1
             score +=7
-            print(Fore.LIGHTBLUE_EX + "THE number lies btw 1 to 30")
+            print(Fore.LIGHTBLUE_EX + "THE number lies btw 1 to 30\n")
 
         elif(random_number > 30 and random_number <= 80):
             hard_Lives -=1
             attempt +=1
             score +=7
-            print(Fore.LIGHTBLUE_EX + "IT lies btw 40 to 80")
+            print(Fore.LIGHTBLUE_EX + "IT lies btw 40 to 80\n")
 
         elif(random_number > 80 and random_number <= 110):
             hard_Lives -=1
             attempt +=1
             score +=7
-            print(Fore.LIGHTBLUE_EX + "Lies btw 80 to 110")
+            print(Fore.LIGHTBLUE_EX + "Lies btw 80 to 110\n")
         
         #give's a HINT in HARD LEVEL, when one lives is left
         if(hard_Lives == 1):
-            hint = input("\nDo you want a hint?? (y/ n)").lower()
+            hint = input("\nDo you want a hint?? (y/ n) -> ").lower()
             if(hint == "y" or hint == "yes"):
                 score -=5 #Hint make the Hard Level a sort of easy, so we minus 5 point from the score
                 if(random_number % 2 == 0):
@@ -210,8 +210,8 @@ while True:
                     print("The Number is NOT PRIME")
         
         if(hard_Lives == 0):
-            print("\nYou LOSS > _ <")
-            print(f"Score : {score}")
+            print(Fore.LIGHTRED_EX + "\nYou LOSS > _ <")
+            print(Fore.LIGHTYELLOW_EX + f"Score : {score}")
             print(f"Actual Number was {random_number}\n")
             if(win > 1):
                 print(f"Your wining streak is {win}, DO IT AGAIN...\n")
