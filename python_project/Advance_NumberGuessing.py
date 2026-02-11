@@ -39,8 +39,10 @@ while True:
         print(Fore.LIGHTBLUE_EX + "*******************************" + Fore.RESET)
         break
 
+    easy_Lives = 7
+    random_number = int(random.randint(2, 100))
     while(Level == 1):
-        # print(random_number) Answer revealing
+        print(random_number) 
         #Tells invalid input by the user, valid input must be > 1
         print(Fore.RED + f"Lives: {easy_Lives}" + Fore.RESET)
         while True:
@@ -80,7 +82,7 @@ while True:
         elif(guess < random_number):
             easy_Lives -=1
             attempt +=1
-            if(random_number > 20 and guess > 60):
+            if(random_number > 60 and guess <= 20):
                 print("Huge diiiiiiffff\n")
                 score +=4
             else:
@@ -97,7 +99,7 @@ while True:
             break
         
     #Medium Level
-    random_number = int(random.randint(1, 100)) 
+    random_number = int(random.randint(2, 100)) 
     score = 0
     while(Level == 2):
         #Tells user if the number is high or low
@@ -152,7 +154,7 @@ while True:
 
     #Hard Level
     score = 0
-    random_number = int(random.randint(1, 110)) 
+    random_number = int(random.randint(2, 110)) 
     while Level == 3:
         print(Fore.RED + f"LIVES: {hard_Lives}")
         # print(random_number) Answer revealing
