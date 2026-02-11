@@ -10,41 +10,37 @@ int main(){
     bool prime;
     int number;
     char again;
+    bool is_prime;
     printf("\nWelcome\n");
-
     do{
-        //choosing here to generate or checking
+        //generate prime number till input or check if input is prime or not
         printf("\nWhat do you wanna do, Generate or Check? (g/ c):");
         scanf(" %c", &choose); 
 
         //checking, prime or not
-        while(choose == 'c'){
+        while(choose == 'c' || invalid == 'y'){
             prime = true;
-
             //checking if the user entered a valid number or not
             do{
                 printf("\nEnter Number:");
+                // To check if input is a valid integer and only one integer
                 if(scanf("%d", &number) != 1){
                     printf("\nInvalid Input\n");
         
-                while(getchar() != '\n');
-                printf("\nDo you wanna try? (y/ n)");
-                scanf(" %c", &invalid);
+                    while(getchar() != '\n');
+                    printf("\nDo you wanna try? (y/ n):");
+                    scanf("%c", &invalid);
                 } else if(number <= 1){
                     printf("\nNot Prime\n");
                     printf("\nNumber must be >= 1");
-                    printf("\nWanna try again? (y/n): ");
-                    scanf(" %c", &invalid);
+                    printf("\nWanna try again? (y/n):");
+                    scanf("%c", &invalid);
             
                 } else{
                     break; // break if the number is valid
                 }
             } while(invalid == 'y' || invalid == 'Y'); //repeat until user enter's y
-
-            if(invalid == 'n' || invalid == 'N'){ //breaking system, if user enter n in invalid it will stop
-                printf("\nThanks\n");
-                break;
-            }
+            
             //checking function, to check weather the number is prime or not
             for(int i = 2; i <= sqrt(number); i++){
                 if(number % i == 0){
@@ -60,16 +56,60 @@ int main(){
                 printf("\nWrong input\n");
             }
             }
-            if(prime == true || prime == false){
-                printf("\nDo you wanna try again? (y/ n)");
-                scanf(" %c", &again);
-                if(again == 'n' || again == 'N'){
-                    printf("\nThank you for playing\n");
+            printf("\nDo you wanna try again? (y/ n)");
+            scanf(" %c", &again);
+            if(again == 'n' || again == 'N'){
+                printf("\nThank you for playing\n");
+                break;
+            }
+        }
+        
+        //generating the prime number.
+        while(choose == 'g' || choose == 'G'){
+            do{
+                printf("\nEnter number: ");
+                if(scanf("%d", &number) != 1){
+                    printf("\nInvalid input\n");
+                    while(getchar() != '\n');
+                    printf("\nDo you wanna try again? (y/ n)");
+                    scanf(" %c", &invalid);
+                } else if(number <= 1){
+                    printf("not prime\n");
+                    printf("number must be >= 2\n");
+                    printf("wanna try again? (y/ n): ");
+                    scanf("%c", &invalid);
+                }else{
+                    printf("\nReceived valid number: %d", number);
                     break;
+                }
+            } while(invalid == 'y' || invalid == 'Y');
+            if(invalid == 'n' || invalid == 'N'){
+                printf("\nThank you\n");
+                break;
+            }
+
+            //generating happens here
+            printf("\nGenerating primes till %d: ", number);
+            // iterate from 2 till number to check if it is prime
+            for(int i = 2; i <= number; i++){
+                // check if 'i' is prime
+                is_prime = true;
+                for(int d=2; d <= sqrt(i); d++){
+                    if (i % d == 0) {
+                        is_prime = false;
+                        break;
+                    }
+                }
+                // print 'i' if it is prime
+                if (is_prime == true) {
+                    printf("%d ", i);
                 }
             }
         }
-    } while(again == 'y' || again == 'Y'); //restarting the game
+        
+    }while(again == 'y' || again == 'Y'); //restarting the game
+    
 }
 
 //Objective: 1. make the whole loop repeat, 2. in checker number 2 to 3 is not working
+//3. make the Prime number generator work well and 
