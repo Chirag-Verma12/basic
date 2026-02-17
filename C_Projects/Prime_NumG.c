@@ -33,8 +33,6 @@ int main(){
                 } else if(number <= 1){
                     printf("\nNot Prime\n");
                     printf("\nNumber must be >= 1");
-                    printf("\nWanna try again? (y/n):");
-                    scanf("%c", &invalid);
             
                 } else{
                     break; // break if the number is valid
@@ -46,22 +44,13 @@ int main(){
                 if(number % i == 0){
                     prime = false;
                     printf("\nNOT prime\n");
-                    break;
-                } 
-
+                }
+                break;
+            }
             if(prime == true){
                 printf("\nPRIME\n");
-                break;
-            }else{
-                printf("\nWrong input\n");
             }
-            }
-            printf("\nDo you wanna try again? (y/ n)");
-            scanf(" %c", &again);
-            if(again == 'n' || again == 'N'){
-                printf("\nThank you for playing\n");
-                break;
-            }
+            break;
         }
         
         //generating the prime number.
@@ -76,17 +65,11 @@ int main(){
                 } else if(number <= 1){
                     printf("not prime\n");
                     printf("number must be >= 2\n");
-                    printf("wanna try again? (y/ n): ");
-                    scanf("%c", &invalid);
                 }else{
                     printf("\nReceived valid number: %d", number);
                     break;
                 }
             } while(invalid == 'y' || invalid == 'Y');
-            if(invalid == 'n' || invalid == 'N'){
-                printf("\nThank you\n");
-                break;
-            }
 
             //generating happens here
             printf("\nGenerating primes till %d: ", number);
@@ -105,11 +88,15 @@ int main(){
                     printf("%d ", i);
                 }
             }
+            break;
+        }
+        printf("\nDo you wanna try again? (y/ n)");
+        scanf(" %c", &again);
+        if(again == 'n' || again == 'N'){
+            printf("\nThank you for playing\n");
+            break;
         }
         
     }while(again == 'y' || again == 'Y'); //restarting the game
     
 }
-
-//Objective: 1. make the whole loop repeat, 2. in checker number 2 to 3 is not working
-//3. make the Prime number generator work well and 
