@@ -28,7 +28,7 @@ int main(){
                     printf("\nInvalid Input\n");
         
                     while(getchar() != '\n');
-                    printf("\nDo you wanna try? (y/ n):");
+                    printf("\nDo you wanna try? (y/ n): ");
                     scanf("%c", &invalid);
                 } else if(number <= 1){
                     printf("\nNot Prime\n");
@@ -38,6 +38,9 @@ int main(){
                     break; // break if the number is valid
                 }
             } while(invalid == 'y' || invalid == 'Y'); //repeat until user enter's y
+            if(invalid == 'n' || invalid == 'N'){
+                break;
+            }
             
             //checking function, to check weather the number is prime or not
             for(int i = 2; i <= sqrt(number); i++){
@@ -60,7 +63,7 @@ int main(){
                 if(scanf("%d", &number) != 1){
                     printf("\nInvalid input\n");
                     while(getchar() != '\n');
-                    printf("\nDo you wanna try again? (y/ n)");
+                    printf("\nDo you wanna try again? (y/ n): ");
                     scanf(" %c", &invalid);
                 } else if(number <= 1){
                     printf("not prime\n");
@@ -70,6 +73,9 @@ int main(){
                     break;
                 }
             } while(invalid == 'y' || invalid == 'Y');
+            if(invalid == 'n' || invalid == 'N'){
+                break;
+            }
 
             //generating happens here
             printf("\nGenerating primes till %d: ", number);
@@ -90,7 +96,7 @@ int main(){
             }
             break;
         }
-        printf("\nDo you wanna try again? (y/ n)");
+        printf("\nDo you wanna play? (y/ n): ");
         scanf(" %c", &again);
         if(again == 'n' || again == 'N'){
             printf("\nThank you for playing\n");
