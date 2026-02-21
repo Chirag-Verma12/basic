@@ -11,10 +11,12 @@ int main(){
     int number;
     char again;
     bool is_prime;
-    printf("\nWelcome\n");
+    printf("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
+    printf("    Welcome To, Prime Number Checker/ Generator\n");
+    printf("---------------------------------------------------\n");
     do{
         //generate prime number till input or check if input is prime or not
-        printf("\nWhat do you wanna do, Generate or Check? (g/ c):");
+        printf("\nWhat do you wanna do,\nGenerate or Check? (g/ c):");
         scanf(" %c", &choose); 
 
         //checking, prime or not
@@ -99,7 +101,9 @@ int main(){
         printf("\nDo you wanna play? (y/ n): ");
         scanf(" %c", &again);
         if(again == 'n' || again == 'N'){
-            printf("\nThank you for playing\n");
+            printf("\n===================================\n");
+            printf("      Thank you for playing");
+            printf("\n===================================\n");
             break;
         }
         
