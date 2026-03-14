@@ -1,5 +1,4 @@
 from colorama import Fore, init
-import string
 from numpy import equal
 
 #password strength checker
@@ -7,18 +6,18 @@ init(autoreset=True)
 password = " "
 password_good = False
 
+#scoring the password
+score = 0
+
 #main logic
 while password_good == False:
 
     #defined requirements of a good password, and when the loops starts again all the things reset
     requirements= {
-        "incorrect" : 0,
         "Special_Character" : "@",
         "CountS_C" : 0,
         "uppercase" : 0,
-        "lowercase" : 0,
         "spaces" : 0,
-        "number" : 0
     }
 
     #user enter's password
@@ -32,6 +31,7 @@ while password_good == False:
     for i in range(len(password)):
         if requirements["Special_Character"] in password[i]:
             requirements["CountS_C"] +=1
+            score += 2
         
     if requirements["CountS_C"] < 1:
         print(Fore.RED + "At least one specail character must be in password")
@@ -40,30 +40,29 @@ while password_good == False:
     for s in range(len(password)):
         if password[s].isspace():
             requirements["spaces"] +=1
-        
     if requirements["spaces"] >= 1:
         print(Fore.RED + "No spaces in the PASSWORD")
 
     #checks for uppercase in password
-    if password.isupper():
-        requirements["uppercase"] +=1
-        print(Fore.YELLOW + "All character cant be upper case\n")
-
-    #checks for lowercase in password
-    if password.islower():
-        requirements["lowercase"] +=1
-        print(Fore.YELLOW + "All character cannot be lowercase\n")
+    for u in range(len(password)):
+        if password[u].isupper():
+            requirements["uppercase"] +=1
+    if requirements["uppercase"] < 1:
+        print("There must be a uppercase in password")
 
     #checks for number or int value in password
+    count_digit = 0
     for n in range(len(password)):
         if password[n].isdigit():
-            requirements["number"] +=1
-        else:
-            print("at least one number must be there")
-            break
+            # print("Digit Found: ", password[n])
+            count_digit +=1
+            score += 2
+        # print("Number Count = ", count_digit)
     
-    if requirements["number"] >=1:
-        print(f"your password -> {password} Is all set")
-        break
-            
-#should i also make a number dictonay
+    if (requirements["CountS_C"] and requirements["uppercase"]) >=1 and count_digit >=1:
+        print("\nNow the password is ready for use\n")
+        password_good = True
+
+#score the password 
+print(f"Password = {password}")
+print(f"Score = {score}")
