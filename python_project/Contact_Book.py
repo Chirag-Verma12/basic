@@ -17,14 +17,14 @@ print(Fore.GREEN + "   Contact Book")
 print(Fore.BLACK + "=================")
 print("\b")
 
-while True:
-    #dictionary to store information in list 
-    information = {
+#dictionary to store information in list 
+information = {
         "name" : [],
         "phone_number" : [],
         "city" : []
     }
 
+while True:
     contact_info_saved = False
     menu_select = 0
     
@@ -68,12 +68,5 @@ while True:
             else:
                 print(Fore.BLUE + "\nChanging Information:" + Fore.RESET)
         
-
-
-
-
-
-
-
 
 
