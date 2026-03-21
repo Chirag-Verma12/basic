@@ -1,5 +1,6 @@
 from colorama import Fore, init
 import json
+import os
 init(autoreset=True)
 
 #Storing Data (OOPS)
@@ -67,6 +68,18 @@ while True:
                 break
             else:
                 print(Fore.BLUE + "\nChanging Information:" + Fore.RESET)
+    
+    if menu_select == 2:
+        if not os.path.exists("data.json"):
+            print(Fore.RED + "File doesn't exist")
         
-
-
+        elif os.path.getsize("data.json") == 0:
+            print(Fore.RED + "\nNothing has been saved Yet\n")
+        
+        else:
+            with open("data.json", "r") as file:
+                print("\n")
+                data = json.load(file)
+                print(Fore.MAGENTA +"Your Overall Data:")
+                print(data)
+                print("\n")
