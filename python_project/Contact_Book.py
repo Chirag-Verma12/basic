@@ -1,8 +1,9 @@
-from colorama import Fore, init
+from colorama import Fore, Style, init
 init(autoreset=True)
 import json
 import os
 
+print(Fore.CYAN + Style.BRIGHT + "============ Contact Book ============" + Style.RESET_ALL)
 #import file name as FILE
 FILE = "data.json"
 
@@ -21,16 +22,16 @@ def save_contact(contacts):
 #adding contact 
 def add_contact():
     correct_contact_number = False
-    name = input("Enter name -> ")
+    name = input(Fore.YELLOW + "Enter name -> " + Fore.RESET)
     while correct_contact_number == False:
-        phone_number = input("Phone number -> ")
+        phone_number = input(Fore.YELLOW + "Phone number -> " + Fore.RESET)
         if len(phone_number) != 10 or not phone_number.isdigit():
-            print("Incorrect Contact Number\n")
+            print(Fore.RED + "Incorrect Contact Number\n")
         else:
             correct_contact_number = True
             break
         
-    city = input("Enter city -> ")
+    city = input(Fore.YELLOW + "Enter city -> " + Fore.RESET)
 
     contact = {
         "name" : name,
@@ -41,24 +42,24 @@ def add_contact():
     contacts = loading_file()
     contacts.append(contact)
     save_contact(contacts)
-    print(f"{name} saved sucessfully!!\n")
+    print(Fore.GREEN + f"{name} saved sucessfully!!\n")
 
 #display contacts
 def display_contact():
     contacts = loading_file()
     if not contacts:
-        print("Nothing has been saved yet!\n")
+        print(Fore.CYAN + "Nothing has been saved yet!\n")
         return
     for i, c in enumerate(contacts, 1):
         print(f"\n{i}. {c['name']} | {c['phone_number']} | {c['city']}\n")
 
 #searching
 def search_contact():
-    search = input("Enter name to search -> ")
+    search = input(Fore.BLUE + "Enter name to search -> " + Fore.RESET)
     contacts = loading_file()
 
     if not contacts:
-        print("Nothing has been saved yet!!\n")
+        print(Fore.CYAN + "Nothing has been saved yet!!\n")
         return
     
     result = [c for c in contacts if search in c["name"].lower()]
@@ -66,13 +67,13 @@ def search_contact():
         for c in result:
             print(f"\nName: {c['name']}")
             print(f"\nPhone number: {c['phone_number']}")
-            print(f"\nCity: {c['city']}")
+            print(f"\nCity: {c['city']}\n")
     else:
         print("Contact not found!\n")
 
 #delete contact
 def delete_contact():
-    name = input("Enter name to delete contact -> ")
+    name = input(Fore.RED + "Enter name to delete contact -> " + Fore.RESET)
     contacts = loading_file()
     new_contact = [c for c in contacts if c["name"].lower() != name]
 
@@ -98,6 +99,8 @@ while True:
     elif choose == 5:
         print("Thank you")
         break
+    elif choose < 5:
+        print("Invalid Input")
     else:
-        print("invalid input")
+        print(Fore.RED + "invalid input")
         
